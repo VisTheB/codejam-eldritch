@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eldritch Horror's helper</title>
+  <link href="/codejam-eldritch/assets/eye.ico" rel="icon" type="image">
+  <link rel="stylesheet" href="/codejam-eldritch/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="main__container">
+        <section class="main__ancient">
+          <figure class="ancient__azathoth">
+            <img src="/codejam-eldritch/assets/Ancients/Azathoth.png" alt="azathoth">
+            <figcaption>Азатот</figcaption>
+          </figure>
+          <figure class="ancient__cthulthu">
+            <img src="/codejam-eldritch/assets/Ancients/Cthulthu.png" alt="cthulhu">
+            <figcaption>Ктулху</figcaption>
+          </figure>
+          <figure class="ancient__sothoth">
+            <img src="/codejam-eldritch/assets/Ancients/IogSothoth.png" alt="iogSothoth">
+            <figcaption>Йог-Сотот</figcaption>
+          </figure>
+          <figure class="ancient__shubniggurath">
+            <img src="/codejam-eldritch/assets/Ancients/ShubNiggurath.png" alt="shubNiggurath">
+            <figcaption>Шуб-Ниггурат</figcaption>
+          </figure>
+        </section>
+        <section class="main__difficulty">
+          <div class="difficulty">Очень Лёгкая</div>
+          <div class="difficulty">Лёгкая</div>
+          <div class="difficulty">Средняя</div>
+          <div class="difficulty">Сложная</div>
+          <div class="difficulty">Очень Сложная</div>
+        </section>
+        <section class="main__deck">
+          <span class="shuffle__button">Замешать Колоду</span>
+          <div class="current__state">
+            <div class="stage__box">
+              <span class="stage__text">Первая Стадия</span>
+              <div class="dots">
+                <div class="dot green"></div>
+                <div class="dot brown"></div>
+                <div class="dot blue"></div>
+              </div>
+            </div>
+            <div class="stage__box">
+              <span class="stage__text">Вторая Стадия</span>
+              <div class="dots">
+                <div class="dot green"></div>
+                <div class="dot brown"></div>
+                <div class="dot blue"></div>
+              </div>
+            </div>
+            <div class="stage__box">
+              <span class="stage__text">Третья Стадия</span>
+              <div class="dots">
+                <div class="dot green"></div>
+                <div class="dot brown"></div>
+                <div class="dot blue"></div>
+              </div>
+            </div>
+          </div>
+          <div class="deck"></div>
+          <div class="last__card"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/codejam-eldritch/index.js"></script>
+</body>
+</html>

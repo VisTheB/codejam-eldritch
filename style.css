@@ -1,0 +1,235 @@
+*,
+*::before,
+*::after,
+button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul, ol, li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html {
+  font-size: 20px;
+  height: 100%;
+  line-height: 1;
+}
+body {
+  font-family: Aleo, sans-serif;
+  background-image: url('/codejam-eldritch/assets/home.png');
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+[class*="__container"] {
+  max-width: 71.5rem;
+  margin: 0rem auto;
+  padding: 0rem 0.55rem;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.main__container {
+  /* border: 0.1rem solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__ancient {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  max-width: 45%;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+figure img {
+  max-width: 12.5rem;
+  margin-bottom: 0.25rem;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.2s linear 0s;
+}
+figcaption {
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: white;
+  text-align: center;
+}
+
+figure img.active, figure img:hover {
+  max-width: 13.2rem;
+  transition: all 0.2s linear 0s;
+}
+
+.main__difficulty {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center
+}
+
+.difficulty {
+  border-radius: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: rgb(178, 196, 211);
+  font-family: 'Aleo';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: rgb(28, 32, 63);
+  text-align: center;
+  transition: all 0.2s linear 0s;
+}
+
+.difficulty.active, .difficulty:hover {
+  transition: all 0.2s linear 0s;
+  background-color: rgb(102, 129, 151);
+  box-shadow: 0.2rem 0.2rem 0.25rem black;
+}
+
+.main__deck {
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  min-width: 30%;
+}
+
+.shuffle__button {
+  /* display: none; */
+
+  background-color: rgb(102, 129, 151);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: rgb(18, 21, 41);
+  text-align: center;
+  transition: all 0.2s linear 0s;
+  cursor: pointer;
+  border-radius: 5%;
+  padding: 0.5rem;
+}
+
+.shuffle__button:hover {
+  transition: all 0.2s linear 0s;
+  background-color: rgb(157, 187, 211);
+  box-shadow: 0.2rem 0.2rem 0.25rem black;
+}
+
+.shuffle__button.active {
+  display: none;
+}
+
+.current__state {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 30%;
+}
+.stage__box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.stage__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: rgb(129, 137, 190);
+  text-align: center;
+}
+
+.stage__text.done {
+  font-weight: 700;
+}
+.dots {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.dot {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 1.5rem;
+  justify-content: center;
+  width: 1.5rem;
+}
+.dot.green {
+  background-color: green
+}
+
+.dot.brown {
+  background-color: brown
+}
+
+.dot.blue {
+  background-color: blue
+}
+
+.deck {
+  cursor: pointer;
+  border-radius: 5%;
+  transition: all 0.2s linear 0s;
+  background-image: url('/codejam-eldritch/assets/mythicCardBackground.png');
+}
+
+.deck:hover {
+  width: 7rem;
+  height: 10rem;
+  transition: all 0.2s linear 0s;
+}
+
+.deck, .last__card {
+  background-size: cover;
+  height: 9.5rem;
+  width: 6.5rem
+}
+
+.current__state, .deck, .last__card {
+  display: none;
+}
+
+.current__state.active, .deck.active, .last__card.active {
+  display: '';
+}
+
