@@ -1,13 +1,28 @@
 // --------------------Audio------------------
 
-// const audio = new Audio();
-// audio.src = '/codejam-eldritch/assets/bgMusic.mp3';
-// audio.play();
-// audio.addEventListener('ended', () => {
-//   audio.play();
-// });
+const audio = new Audio();
+const playButton = document.querySelector('.pause');
+let isPlay = true;
+audio.src = './assets/bgMusic.mp3';
+audio.play();
+audio.addEventListener('ended', () => {
+  audio.play();
+});
 
-// console.log(audio.src);
+function playAudio() {
+  if(!isPlay) {
+    isPlay = true;
+    playButton.classList.toggle('pause');
+    audio.play();
+  } else {
+      isPlay = false;
+      playButton.classList.toggle('pause');
+      audio.pause();
+    }
+}
+
+playButton.addEventListener('click', playAudio);
+
 // -------------------------------------------
 
 // -------------------------------------------
@@ -32,6 +47,7 @@ ancient.addEventListener('click', (event) => {
   ancientName = eventTarget.alt;
   eventTarget.classList.toggle('active');
   getCardsQuantity(ancientName);
+  difficulties.classList.add('active');
 })
 
 let grCards, blCards, brCards;
@@ -102,7 +118,7 @@ function shuffleDeck(diff) {
             state.push(j);
           }
         }
-        console.log(state);
+
         const dots = document.querySelectorAll('.dot');
 
         function getState() {
@@ -209,10 +225,36 @@ function shuffleDeck(diff) {
       showCards(greenSorted3, blueSorted3, brownSorted3);
       break;
     case 'Сложная':
+      let greenGeneral4, blueGeneral4, brownGeneral4;
+      greenGeneral4 = cardsDataGreen.filter(item => item.difficulty == 'hard' || item.difficulty == 'normal');
+      blueGeneral4 = cardsDataBlue.filter(item => item.difficulty == 'hard' || item.difficulty == 'normal');
+      brownGeneral4 = cardsDataBrown.filter(item => item.difficulty == 'hard' || item.difficulty == 'normal');
+      
+      let greenSorted4 = [];
+      let brownSorted4 = [];
+      let blueSorted4 = [];
 
+      getSortedCards(greenGeneral4, greenSorted4, grCards, cardsDataGreen);
+      getSortedCards(blueGeneral4, blueSorted4, blCards, cardsDataBlue);
+      getSortedCards(brownGeneral4, brownSorted4, brCards, cardsDataBrown);
+  
+      showCards(greenSorted4, blueSorted4, brownSorted4);
       break;
     case 'Очень Сложная':
+      let greenGeneral5, blueGeneral5, brownGeneral5;
+      greenGeneral5 = cardsDataGreen.filter(item => item.difficulty == 'hard');
+      blueGeneral5 = cardsDataBlue.filter(item => item.difficulty == 'hard');
+      brownGeneral5 = cardsDataBrown.filter(item => item.difficulty == 'hard');
+      
+      let greenSorted5 = [];
+      let brownSorted5 = [];
+      let blueSorted5 = [];
 
+      getSortedCards(greenGeneral5, greenSorted5, grCards, cardsDataGreen);
+      getSortedCards(blueGeneral5, blueSorted5, blCards, cardsDataBlue);
+      getSortedCards(brownGeneral5, brownSorted5, brCards, cardsDataBrown);
+  
+      showCards(greenSorted5, blueSorted5, brownSorted5);
       break;        
   }
 }

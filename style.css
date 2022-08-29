@@ -90,12 +90,16 @@ figure img.active, figure img:hover {
 }
 
 .main__difficulty {
+  display: none;
+}
+
+.main__difficulty.active {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  justify-content: center
+  justify-content: center;
+  transition: all 0.2s linear 0s;
 }
-
 .difficulty {
   border-radius: 5%;
   box-sizing: border-box;
@@ -248,6 +252,29 @@ figure img.active, figure img:hover {
   transition: all 0.2s linear 0s;
   cursor: pointer;
 }
+
+.audio {
+  align-self: center;
+  margin-bottom: 1rem;
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  cursor: pointer;
+  border-radius: 51%;
+  transition: all 0.2s linear 0s;
+}
+
+.audio:hover {
+  transition: all 0.2s linear 0s;
+}
+
+.audio.active {
+  background-image: url("./assets/play.svg");
+}
+.pause {
+  background-image: url("./assets/pause.svg");
+}
+
 
 
 
