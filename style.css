@@ -207,9 +207,6 @@ figure img.active, figure img:hover {
 }
 
 .deck {
-  cursor: pointer;
-  border-radius: 5%;
-  transition: all 0.2s linear 0s;
   background-image: url('/codejam-eldritch/assets/mythicCardBackground.png');
 }
 
@@ -220,16 +217,37 @@ figure img.active, figure img:hover {
 }
 
 .deck, .last__card {
+  cursor: pointer;
+  border-radius: 5%;
+  transition: all 0.2s linear 0s;
   background-size: cover;
   height: 9.5rem;
-  width: 6.5rem
+  width: 6.5rem;
 }
 
-.current__state, .deck, .last__card {
+.current__state, .deck, .last__card, .refresh {
   display: none;
 }
 
 .current__state.active, .deck.active, .last__card.active {
-  display: '';
+  display: unset;
 }
+
+.end {
+  display: unset;
+  background-image: url('./assets/refresh-svgrepo-com.svg');
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  transition: all 0.2s linear 0s;
+}
+
+.end:hover {
+  height: 3.5rem;
+  width: 3.5rem;
+  transition: all 0.2s linear 0s;
+  cursor: pointer;
+}
+
+
 
