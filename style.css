@@ -129,7 +129,7 @@ figure img.active, figure img:hover {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
   justify-content: center;
   min-width: 30%;
 }
@@ -256,9 +256,9 @@ figure img.active, figure img:hover {
 .audio {
   align-self: center;
   margin-bottom: 1rem;
-  width: 40px;
-  height: 40px;
-  background-size: 40px 40px;
+  width: 2rem;
+  height: 2rem;
+  background-size: 2rem 2rem;
   cursor: pointer;
   border-radius: 51%;
   transition: all 0.2s linear 0s;
